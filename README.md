@@ -38,3 +38,25 @@ function map(mapArr, callback){
 
 console.log(map([1,2,3], mutiplyByTwo))
 ```
+
+
+#Challenge 4
+```js 
+// Create the function 
+// Use a for loop to iterate over each element in the array
+//then call the callback function on each element in array
+
+function forEach(arr, callback){
+    for(let i=0; i<arr.length; i++){
+        callback(arr[i])
+    }
+}
+
+
+let alphabet = '';
+const letters = ['a', 'b', 'c', 'd'];
+forEach(letters, function(char) {
+  alphabet += char;
+});
+console.log(alphabet);
+```
