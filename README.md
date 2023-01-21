@@ -79,3 +79,58 @@ forEach(letters, function(char) {
 });
 console.log(alphabet);
 ```
+
+
+#Challenge 5
+
+```js 
+const express = require('express');
+const app = express();
+
+
+const mockBlog = [
+    {
+        id: 1,
+        title: 'First Blog Post',
+        description: 'My first blog post!'
+    },
+    {
+        id: 2,
+        title: 'Second Blog Post',
+        description: 'My Second blog post!'
+    },
+    {
+        id: 3,
+        title: 'Third Blog Post',
+        description: 'My Third blog post!'
+    }
+];
+
+module.exports = mockBlog
+
+app.use((req, res, next) => {
+    res.locals.data = {}
+    next()
+})
+
+app.get('/blog', (req,res) => {
+   res.json(mockBlog) 
+} )
+
+// create route is not completed 
+app.post('/blog', (req, res) => {
+   mockBlog.push(req.body)
+   const createdBlog = mockBlog[mockBlog.length-1]
+   res.locals.data.mockBlog = createdBlog
+})
+
+
+app.get('/blog/:id', (req, res) => {
+    res.json(mockBlog[req.params.id]) 
+})
+
+
+app.listen(3008, () => {
+    console.log('listening on port 3008')
+})
+```
