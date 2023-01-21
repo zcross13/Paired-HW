@@ -4,6 +4,9 @@ Paired takehome challenge that challenges our skills in JavaScript.
 #Challenge 1
 
 ```js 
+// created a function that take in a number 
+// and return that number + 2
+
 const addTwo = (num) => {
     return num + 2
 }
@@ -13,6 +16,9 @@ console.log(addTwo(2))
 
 #Challenge 2
 ```js 
+// created a function that accept a parameter called word
+// return word + the letter s 
+
 const addS = (word) => {
    return word + 's'
 }
@@ -22,9 +28,22 @@ console.log(addS('word'))
 
 #Challenge 3
 ```js 
+
+//create a function call mutiple by two that accepts a num 
+// and return that num * 2 
+
 const mutiplyByTwo = (num) => {
     return num * 2 
 }
+
+// created a function that accept a array and callback 
+// created a variable call newArr as a empty array 
+// loop through each item and the array 
+// create a variable that assign the current index and it value 
+// create a variable that is assign take the value of the current number array 
+// and runs the callback function on that value 
+// push the new variable into the empty array 
+// return the new value 
 
 function map(mapArr, callback){
     const newArr = []
